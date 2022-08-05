@@ -1,14 +1,12 @@
 <div class="container">
   <app-game-control (gameStarted)="onSecondsAdded($event)"></app-game-control>
   <hr>
-  <ng-container *ngFor="let second of seconds">
-    <app-odd *ngIf="second % 2 != 0">
-      <p class="odd">ODD - {{second}}</p>
-    </app-odd>
-    <app-even *ngIf="second % 2 == 0">
-      <p class="even">EVEN - {{second}}</p>
-    </app-even>
+  <ng-container *ngFor="let odd of odds">
+    <app-odd [second]="odd"></app-odd>
+  </ng-container>
 
+  <ng-container *ngFor="let even of evens">
+    <app-even [second]="even"></app-even>
   </ng-container>
 
 </div>

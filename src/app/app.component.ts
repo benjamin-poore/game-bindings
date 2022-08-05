@@ -6,9 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  seconds: number[] = [];
+  evens: number[] = [];
+  odds: number[] = [];
 
   onSecondsAdded(second: number) {
-    this.seconds.push(second);
+    if (second % 2 === 0) {
+      this.evens.push(second);
+    } else {
+      this.odds.push(second);
+    }
   }
 }
