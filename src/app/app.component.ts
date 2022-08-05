@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  seconds: number[] = [];
+
+  onSecondsAdded(second: number) {
+    this.seconds.push(second);
+  }
 }
